@@ -5,6 +5,8 @@ from pydantic import BaseModel
 
 from fastapi import FastAPI, File, UploadFile
 
+import os
+
 import io
 
 import numpy as np
@@ -75,6 +77,7 @@ async def create_upload_file(file: UploadFile= File(...) ):
     image = Image.open(io.BytesIO(file)).convert("RGB")
     image_seg= segment_everything(image=image)
     path = "generated/result.png"
+    os.makedirs(os.path.dirname(path), exist_ok=True)
     image_seg.save(path)
     return FileResponse(path, media_type="image/jpeg")
     
