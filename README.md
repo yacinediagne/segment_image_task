@@ -6,7 +6,7 @@ This assignment is designed to assess your software engineering skills in the co
 
 1. **Creating the vitual environment then Testing**
 
-In the file script.py has been provide the code to create the vitual environment and the testing step. To run the script, you just need python in your computer and then enter the following command.
+In the file script.py has been provided the code to create the vitual environment and the testing step. To run the script, you just need python as requirement and then enter the following command.
 
     ```bash
     python scrypt.py
